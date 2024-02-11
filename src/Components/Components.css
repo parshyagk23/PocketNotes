@@ -7,9 +7,10 @@
     background-color: #fff;
 }
 .notetitle{
-    width: 230px;
+    width: 28vw;
     margin: 0 auto;
     padding-top: 30px;
+    text-align: center;
 }
 .notetitle h1{
     font-size: 35px;
@@ -19,7 +20,7 @@
 .addgrpbtn{
     position: absolute;
     bottom: 6.3vh;
-    left:  25.78vw;
+    left:  22.78vw;
     background-color: #16008B;
     border-radius: 43px;
     padding: 0 19px;
@@ -37,13 +38,13 @@
 /* PopUpGroup start */
 
 .popup-group{
-    width: 47vw;
+    /* width: 47vw; */
     /* height: 42vh; */
     padding: 30px;
     background-color: #fff;
     position: fixed;
     Top:25vh;
-    Left:30vw;
+    Left:25vw;
     border-radius: 6px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -51,12 +52,12 @@
     
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 .group section{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 .group h2{
     font-size: 29px;
@@ -72,8 +73,9 @@
     font-weight: 400;
     line-height: 32px;
     max-width:12vw;
-    margin: 0 0 0 31.25vw;
+    padding: 2px 40px;
     text-align: center;
+    cursor: pointer;
 
 }
 .group-name,.color-choose{
@@ -99,7 +101,7 @@
 }
 
 .color-choose div{
-    width: 20vw;
+    width: 250px;
     height: 40px;
     display: flex;
     gap: 12px;
@@ -113,3 +115,38 @@
 
 }
 /* PopUpGroup end   */
+/* NewNotes start   */
+
+    .note-container{
+        width: 31vw;
+        cursor: pointer;
+    }
+    .note-container:hover {
+        background:  #1212122b;
+        border-radius: 16px;
+       
+    }
+    .note-circle{
+        width:68px;
+        height:68px;
+        border-radius:50px;
+        font-size:24px;
+        font-weight:500;
+        color:#FFF;
+        position: relative;
+    }
+    .note-circle span{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .note-name{
+        font-size:24px;
+        font-weight:500;
+        color:#000;
+        display: flex;
+        align-items: center;
+        width: 22vw;     
+    }
+/* NewNotes end   */
