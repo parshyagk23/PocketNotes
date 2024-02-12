@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import {HandleSendDatatoNoteBox} from './HandleExport'
 
-const NewNotes = ({IsNoteadd}) => {
-    const [group, Setgroup] =useState([]);
+
+const NewNotesGrp = ({IsNoteadd,SetOpenNoteBox ,setNoteName ,setSaveNotes}) => {
+    
+    const [noteGroup, SetnoteGroup] =useState([]);
    
     useEffect(()=>{
         const UpdateNewnotes=()=>{
@@ -11,29 +14,27 @@ const NewNotes = ({IsNoteadd}) => {
         const groupMap = groupFilter.map((key)=>(
             JSON.parse(localStorage.getItem(key))
             ));
-          
-                
-        Setgroup(groupMap)
+             
+            SetnoteGroup(groupMap)
         }
         UpdateNewnotes()
-        
        
     },[IsNoteadd]);
-  
+   
    
    
   return (
     <div style={{ overflowY: 'scroll', height:'85vh' }} >
     <section style={{ display:'flex', gap:'10px', flexDirection:'column' , }} > 
-        {group.map((group, index)=>(
-            <main  key={index} className='note-container' >
+        {noteGroup.map((group, index)=>(
+            <main  key={index} className='note-container' onClick={ ()=>HandleSendDatatoNoteBox(group,SetOpenNoteBox,setNoteName,setSaveNotes) } >
                
             <div style={{   display: 'flex',
                             gap: '30px' ,
                             padding:" 10px 0 10px 15px"
                             }}     >
             <div style={{   backgroundColor:group.color, }} className='note-circle' >
-               <span> {group.NoteName}</span>
+               <span> {group.ShortName}</span>
                 </div>
             <div className='note-name' >{group.groupName}</div>
             </div>
@@ -42,8 +43,7 @@ const NewNotes = ({IsNoteadd}) => {
   </section>
   </div>
   )
-
-
 }
 
-export default NewNotes
+export default NewNotesGrp
+

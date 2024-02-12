@@ -1,8 +1,8 @@
 
-import NewNotes from './NewNotes';
+import NewNotesGrp from './NewNotesGrp';
 import PopupGroup from './PopupGroup'
 import { useState } from 'react'
-const NotesGrpList = () => {
+const NotesGrpList = ({SetOpenNoteBox, setNoteName , setSaveNotes}) => {
  const [IsOpenPopup , setIsOpenPopup] = useState(false)
  const [IsNoteadd, Setisnoteadd] = useState(false)
  const openPopup = () => {
@@ -18,10 +18,10 @@ const NotesGrpList = () => {
             <h1>Pocket Notes</h1>
         </div>
         <div>
-          <NewNotes  IsNoteadd={IsNoteadd} />
+          <NewNotesGrp  IsNoteadd={IsNoteadd} SetOpenNoteBox={SetOpenNoteBox} setNoteName={setNoteName}   setSaveNotes={setSaveNotes}/>
         </div>
-        <div className='addgrpbtn' >
-            <button onClick={openPopup} >+</button>
+        <div className='addgrpbtn'onClick={openPopup} >
+            <button  >+</button>
         </div>
            <PopupGroup  open ={IsOpenPopup} close={closePopup} Setisnoteadd={Setisnoteadd}  />
     </div>

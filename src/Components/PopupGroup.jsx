@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from "react";
 
 const PopupGroup = ({ open, close, Setisnoteadd }) => {
+  
  
   const [GroupData, SetgroupData] = useState({
+    groupid:'',
     groupName: "",
     color: "",
-    NoteName: "",
+    ShortName: "",
   });
   const [error, Seterror] = useState({
     groupName: null,
     color: null,
   });
 
-  const [NoteName, SetNoteName] = useState("");
-  const [count, SetCount] = useState(1);
+  const [ShortName, SetShortName] = useState("");
+  const [count, SetCount] = useState(0);
 
   useEffect(() => {
     const createProfileName = () => {
       const words = GroupData.groupName.trim().split(" ");
-      let Notename = "";
+      let ShortName = "";
       if (words.length < 2) {
-        Notename = words[0]?.charAt(0);
+        ShortName = words[0]?.charAt(0).toUpperCase();
       } else {
         let firstWord = words[0];
         let lastWord = words[words.length - 1];
-        Notename =
+        ShortName =
           firstWord.charAt(0).toUpperCase() + lastWord.charAt(0).toUpperCase();
       }
-      SetNoteName(Notename);
+      SetShortName(ShortName);
     };
     createProfileName();
   });
@@ -87,13 +89,10 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
     } else {
       const localCount = parseInt(window.localStorage.getItem("count") || 0) + 1;
       window.localStorage.setItem("count", localCount);
-      window.localStorage.setItem(
-        `groupData_${localCount}`,
-        JSON.stringify(GroupData)
-      );
+      window.localStorage.setItem(`groupData_${localCount}`,JSON.stringify(GroupData));
 
       SetCount(localCount);
-      SetgroupData({ groupName: "", color: "", NoteName: "" });
+      SetgroupData({ groupName: "", color: "", ShortName: "" });
       Setisnoteadd((prev) => !prev);
       close();
     }
@@ -133,7 +132,8 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
                       return {
                         ...prev,
                         color: bgcolor,
-                        NoteName: NoteName,
+                        ShortName: ShortName,
+                        groupid:`group_${count+1}`
                       };
                     });
                   }}
