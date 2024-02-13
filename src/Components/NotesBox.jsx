@@ -1,25 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Notesdisplay from "./Notesdisplay";
 
-const NotesBox = ({ NoteName, setSaveNotes }) => {
+const NotesBox = ({ NoteName }) => {
   const [saveInputText, setsaveInputText] = useState("");
-  const [count, setcount] = useState(1);
-
- 
+  
   const HandleSaveNotes = () => {
     const UniqueGrpData =  window.localStorage.getItem(NoteName.groupid);
     let newNotes =[]
+    let time = []
+    let date =[]
+    let DateTime=new Date();
+    const FormatCurrentDate= `${DateTime.toLocaleDateString('en-IN',{
+      day:'numeric',
+      month:'short',
+      year:'numeric'
+    })}`
+    const FormatCurrentTime=`${DateTime.toLocaleTimeString('en-IN',{
+      hour:'numeric',
+      minute:'numeric',
+
+    }).toUpperCase()}`
+
     if(UniqueGrpData){
       const parsedData=JSON.parse(UniqueGrpData)
-      newNotes=[...parsedData, saveInputText]
+      newNotes=[...parsedData.note, saveInputText]
+      time =[...parsedData.Time, FormatCurrentTime]
+      date =[...parsedData.Date, FormatCurrentDate]
     }else{
       newNotes=[saveInputText]
+      time =[ FormatCurrentTime]
+      date =[ FormatCurrentDate]
+
     }
-    setSaveNotes(newNotes)
-    window.localStorage.setItem(NoteName.groupid, JSON.stringify(newNotes))
+    let saveNotes ={
+      note:newNotes,
+      Time:time,
+      Date:date
+    }
+    
+    window.localStorage.setItem(NoteName.groupid, JSON.stringify(saveNotes))
     setsaveInputText('')
-    setcount(count+1)
+    
   };
+
   return (
     <main className="noteBox-main">
       <nav style={{ backgroundColor: "#001F8B" }}>
@@ -28,7 +51,7 @@ const NotesBox = ({ NoteName, setSaveNotes }) => {
           className="nav-item"
         >
           <div
-            style={{ backgroundColor: NoteName.color }}
+            style={{ backgroundColor: NoteName.color , width:'66px' }}
             className="note-circle"
           >
             <span> {NoteName.ShortName}</span>
@@ -38,7 +61,7 @@ const NotesBox = ({ NoteName, setSaveNotes }) => {
           </div>
         </div>
       </nav>
-      <Notesdisplay groupId={NoteName.groupid} count={count} />
+      <Notesdisplay groupId={NoteName.groupid} saveInputText={saveInputText} />
       <div className="input-box">
         <div
           style={{
@@ -58,20 +81,21 @@ const NotesBox = ({ NoteName, setSaveNotes }) => {
             placeholder="Enter your text here..........."
             onChange={(e) => setsaveInputText(e.target.value)}
           ></textarea>
-          <div onClick={() => HandleSaveNotes()}>
+          <button style={{all:'unset', cursor:'pointer'}} onClick={() => HandleSaveNotes()} disabled={saveInputText===""}  >
             <svg
               width="35"
               height="29"
               viewBox="0 0 35 29"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              
             >
               <path
                 d="M0 29V18.125L14.5 14.5L0 10.875V0L34.4375 14.5L0 29Z"
-                fill="#ABABAB"
+                fill= {saveInputText==="" ?"#ABABAB":"#001F8B"}
               />
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     </main>

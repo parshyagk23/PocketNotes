@@ -1,27 +1,51 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
-const Notesdisplay = ({groupId,count}) => {
-    const [getNotes ,setNotes] = useState([])
-    useEffect(()=>{
-        
-       const Notesdata= JSON.parse(window.localStorage.getItem(groupId))
-       if(Notesdata === null){
-           setNotes([])
-       }else{
-        setNotes(Notesdata)
-       }
-    },[groupId,count])
+const Notesdisplay = ({ groupId, saveInputText }) => {
+  const [getNotes, setNotes] = useState({
+    note:[],
+    Time:[],
+    Date:[]
+  });
+  
+ 
+  useEffect(() => {
+    const Notesdata = JSON.parse(window.localStorage.getItem(groupId));
+    if (Notesdata === null) {
+      setNotes({
+        note:[],
+        Time:[],
+        Date:[]
+      });
+    } else {
+      setNotes((prev)=>{
+        return {...prev , note:Notesdata.note, Time:Notesdata.Time, Date:Notesdata.Date}
+      });
+    }
+    
+   
+  }, [groupId, saveInputText]);
 
 
   return (
-    <div>
-        {getNotes.map((note, index)=>(
-            <div key={index} >
-                {note}
+   
+    <main className="Notes-display-main"  >
+      {getNotes.note.map((note, index)=>(
+            <div  className="Notes-display"  key={index}>
+            <div className="note-para"  >
+              <p >
+               {note}
+              </p>
             </div>
+            <div className="note-time" >
+              <p>{getNotes.Date[index]} <span></span> {getNotes.Time[index]} </p>
+            
+            </div>
+          </div>
         ))}
-    </div>
-  )
-}
+      
+     
+     </main>
+  );
+};
 
-export default Notesdisplay
+export default Notesdisplay;

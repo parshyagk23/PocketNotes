@@ -1,6 +1,6 @@
 import React from "react";
 import DefaultNoteimg from "../assets/DefaultNoteimg.png";
-import locksvg from "../assets/lock.svg";
+
 const DefaultNoteBox = () => {
   return (
     <main className="default-main" >

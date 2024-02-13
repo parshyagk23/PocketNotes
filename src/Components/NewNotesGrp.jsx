@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {HandleSendDatatoNoteBox} from './HandleExport'
 
 
-const NewNotesGrp = ({IsNoteadd,SetOpenNoteBox ,setNoteName ,setSaveNotes}) => {
+const NewNotesGrp = ({IsNoteadd,SetOpenNoteBox ,setNoteName }) => {
     
     const [noteGroup, SetnoteGroup] =useState([]);
    
@@ -27,7 +27,7 @@ const NewNotesGrp = ({IsNoteadd,SetOpenNoteBox ,setNoteName ,setSaveNotes}) => {
     <div style={{ overflowY: 'scroll', height:'85vh' }} >
     <section style={{ display:'flex', gap:'10px', flexDirection:'column' , }} > 
         {noteGroup.map((group, index)=>(
-            <main  key={index} className='note-container' onClick={ ()=>HandleSendDatatoNoteBox(group,SetOpenNoteBox,setNoteName,setSaveNotes) } >
+            <main  key={index} className='newnotegrp-container' onClick={ ()=>HandleSendDatatoNoteBox(group,SetOpenNoteBox,setNoteName) } >
                
             <div style={{   display: 'flex',
                             gap: '30px' ,

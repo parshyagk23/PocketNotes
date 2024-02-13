@@ -20,19 +20,20 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
   useEffect(() => {
     const createProfileName = () => {
       const words = GroupData.groupName.trim().split(" ");
-      let ShortName = "";
+      let shortName = "";
       if (words.length < 2) {
-        ShortName = words[0]?.charAt(0).toUpperCase();
+        shortName = words[0]?.charAt(0).toUpperCase();
       } else {
         let firstWord = words[0];
         let lastWord = words[words.length - 1];
-        ShortName =
+        shortName =
           firstWord.charAt(0).toUpperCase() + lastWord.charAt(0).toUpperCase();
       }
-      SetShortName(ShortName);
+      SetShortName(shortName);
+     
     };
     createProfileName();
-  });
+  },);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -92,7 +93,7 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
       window.localStorage.setItem(`groupData_${localCount}`,JSON.stringify(GroupData));
 
       SetCount(localCount);
-      SetgroupData({ groupName: "", color: "", ShortName: "" });
+      SetgroupData({groupid:'', groupName: "", color: "", ShortName: "" });
       Setisnoteadd((prev) => !prev);
       close();
     }
@@ -132,8 +133,8 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
                       return {
                         ...prev,
                         color: bgcolor,
-                        ShortName: ShortName,
-                        groupid:`group_${count+1}`
+                        ShortName:ShortName,
+                        groupid:`${ShortName}Note_${count+1}`
                       };
                     });
                   }}

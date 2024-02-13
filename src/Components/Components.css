@@ -2,7 +2,7 @@
 
 /* NotesGrpList start */
 .notesgrp{
-    width: 33.9vw;
+    width: 29vw;
     height: 100vh;
     background-color: #fff;
 }
@@ -119,20 +119,20 @@
 
 }
 /* PopUpGroup end   */
-/* NewNotes start   */
+/* NewNotesgrpgrp start   */
 
-    .note-container{
-        width: 31vw;
+    .newnotegrp-container{
+        width: 27vw;
         cursor: pointer;
     }
-    .note-container:hover {
+    .newnotegrp-container:hover {
         background:  #1212122b;
         border-radius: 16px;
        
     }
     .note-circle{
-        width:68px;
-        height:68px;
+        width: 76px;
+        height: 66px;
         border-radius:50px;
         font-size:24px;
         font-weight:500;
@@ -153,11 +153,11 @@
         align-items: center;
         width: 22vw;     
     }
-/* NewNotes end   */
+/* NewNotesgrp end   */
 /* NotesBox Start   */
 .noteBox-main{
     background-color: #DAE5F5;
-    width: 68vw;
+    width: 71vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -166,13 +166,13 @@
 }
 
 .input-box{
-    width: 66.77vw;
+    width: 71vw;
     background: #001F8B;
 }
 .input-box textarea{
     resize: none;
     padding: 20px 0 0 20px;
-    width: 58.77vw;
+    width: 63vw;
     color: #9a9a9a;
     border: none;
     font-weight: 500;
@@ -186,10 +186,51 @@
 /* DefaultBox end   */
     .default-main{
         background-color: #DAE5F5;
-         width: 68vw;
+         width: 71vw;
         height: 100vh; 
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
 /* DeFaultBox end   */
+/* Notes-display start   */
+.Notes-display-main{
+    width: 71vw;
+    height: 52vh;
+    overflow-y: scroll;
+    
+}
+.Notes-display{
+    width: 67vw;
+     margin: 20px auto;
+     padding: 20px;
+    margin-top: 20px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.note-para p {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    font-weight: 400;
+}
+.note-time p{
+    font-size: 18px;
+    line-height: 28px;
+    text-align: end;
+    font-weight: 500;
+    color: #353535;
+    
+
+}
+.note-time p span{
+    display: inline-grid;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    background-color: #353535;
+    margin: 2px 15px;
+}
+/* Notes-display end   */
+
