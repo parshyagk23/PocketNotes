@@ -11,13 +11,13 @@
 
 body {
     width: 100%;
-    background-color: #000000;
+   
 }
 ::-webkit-scrollbar {
     width: 10px; /* width of the scrollbar */
   }
 ::-webkit-scrollbar-track {
-    background: #00000082;
+    background: #bdbbbb82;
     width: 10px;
     border-radius: 6px; 
   }
