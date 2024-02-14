@@ -24,19 +24,19 @@ const NewNotesGrp = ({IsNoteadd,SetOpenNoteBox ,setNoteName }) => {
    
    
   return (
-    <div style={{ overflowY: 'scroll', height:'85vh' }} >
+    <div className='new-notegrp' >
     <section style={{ display:'flex', gap:'10px', flexDirection:'column' , }} > 
         {noteGroup.map((group, index)=>(
             <main  key={index} className='newnotegrp-container' onClick={ ()=>HandleSendDatatoNoteBox(group,SetOpenNoteBox,setNoteName) } >
                
             <div style={{   display: 'flex',
-                            gap: '30px' ,
+                            gap: '15px' ,
                             padding:" 10px 0 10px 15px"
                             }}     >
             <div style={{   backgroundColor:group.color, }} className='note-circle' >
                <span> {group.ShortName}</span>
                 </div>
-            <div className='note-name' >{group.groupName}</div>
+            <div className='note-name' ><p>{group.groupName}</p></div>
             </div>
             </main>
         ))}

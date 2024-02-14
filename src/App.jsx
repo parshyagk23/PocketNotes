@@ -8,17 +8,19 @@ function App() {
 
   const [OpenNoteBox , SetOpenNoteBox] =useState(false)
   const [NoteName ,setNoteName] = useState([])
-  // const [saveNote,setSaveNotes] = useState({
-  //   note: [],
-  //   Time:[],
-  //   Date:[]
-  // })
-
+ 
   return (
-      <main style={{ display:'flex', overflow:'hidden' }} >
-        <NotesGrpList SetOpenNoteBox={SetOpenNoteBox} setNoteName={setNoteName}   />
+   
+      <main >
+        <div className="mobile-note" >
+         {OpenNoteBox?( OpenNoteBox?(<NotesBox NoteName={NoteName} SetOpenNoteBox={SetOpenNoteBox} />):(<DefaultNoteBox/>)):(  <NotesGrpList SetOpenNoteBox={SetOpenNoteBox} setNoteName={setNoteName} />)}
+
+        </div>
       
-        {OpenNoteBox?(<NotesBox NoteName={NoteName}    />):(<DefaultNoteBox/>)}
+      <div className="desktop-note"  >
+       <NotesGrpList SetOpenNoteBox={SetOpenNoteBox} setNoteName={setNoteName} />
+        {OpenNoteBox?(<NotesBox NoteName={NoteName}/>):(<DefaultNoteBox/>)}
+      </div>
         
         
       </main>

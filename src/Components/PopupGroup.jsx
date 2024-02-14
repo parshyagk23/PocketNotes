@@ -41,6 +41,7 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
         Seterror((prev) => {
           return { ...prev, groupName: null, color: null };
         });
+        SetgroupData({groupid:'', groupName: "", color: "", ShortName: "" });
         close();
       }
     };
@@ -144,8 +145,7 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
           </div>
           <p style={{ color: "red", fontSize: "20px" }}>{error.color}</p>
         </section>
-        <div style={{ display: 'flex',
-                    justifyContent: 'end' }}   >
+        <div className="popupgrp-btn"   >
         <button onClick={HandleCreateGroup}>create</button>
         </div>
       </div>

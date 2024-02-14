@@ -20,8 +20,11 @@ const NotesGrpList = ({SetOpenNoteBox, setNoteName }) => {
         <div>
           <NewNotesGrp  IsNoteadd={IsNoteadd} SetOpenNoteBox={SetOpenNoteBox} setNoteName={setNoteName}  />
         </div>
-        <div className='addgrpbtn'onClick={openPopup} >
-            <button  >+</button>
+        <div className='open-popup'  >
+        <div onClick={openPopup} >
+            <button className='addgrpbtn'  >+</button>
+        </div>
+
         </div>
            <PopupGroup  open ={IsOpenPopup} close={closePopup} Setisnoteadd={Setisnoteadd}  />
     </div>

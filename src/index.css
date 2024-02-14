@@ -2,13 +2,270 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
 
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-body{
+
+body {
     width: 100%;
     background-color: #000000;
+}
+::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+  }
+::-webkit-scrollbar-track {
+    background: #00000082;
+    width: 10px;
+    border-radius: 6px; 
+  }
+ 
+
+  ::-webkit-scrollbar-thumb {
+    width: 8px;
+    background: #FFFFFF;
+    border-radius: 8px; 
+  }
+  
+
+.desktop-note {
+    display: flex;
+    overflow: hidden;
+}
+
+.mobile-note {
+    display: none;
+}
+
+@media (max-width:675px) {
+    .backbtn{display: grid;}
+    .desktop-note {
+        display: none;
+    }
+
+    .mobile-note {
+        display: block;
+    }
+
+    /*  Notegrp start */
+    .notesgrp {
+        width: 100vw;
+    }
+
+    /*  Notegrp end */
+    .notetitle {
+        width: 80vw;
+        text-align: left;
+    }
+
+
+
+
+
+    .new-notegrp {
+        width: 80vw;
+        margin: 1px 0 0 44px;
+        margin-top: 20px;
+        height: 75vh;
+    }
+
+
+    .newnotegrp-container {
+        width: 70vw;
+    }
+
+    .note-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .note-name {
+        width: 40vw;
+    }
+
+    .note-name p {
+        height: 56px;
+    }
+
+    .open-popup {
+        left: 67vw;
+
+    }
+
+    /*  Notegrp end */
+    /* Popupgroup start */
+    
+    .popup-group {
+        padding: 17px;
+       
+    }
+
+    .group h2 {
+        font-size: 26px;
+    }
+
+    .group-name label {
+        width: 27vw;
+    }
+
+    .color-choose h3 {
+        width: 33vw;
+    }
+
+    .group-name label,
+    .color-choose h3 {
+        font-size: 23px;
+        line-height: 26px;
+
+    }
+
+    .color-choose div {
+        width: 38vw;
+        height: 4vh;
+        gap: 10px;
+    }
+
+    .color-choose div span {
+        width: 23px;
+        height: 23px;
+    }
+
+    .group-name input {
+        width: 44vw;
+        padding: 0px 0 0 10px;
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .popupgrp-btn {
+        justify-content: center;
+    }
+
+    .popupgrp-btn button {
+        padding: 2px 85px;
+    }
+
+    /* Popupgroup end */
+    /* Notebox start */
+    .noteBox-main {
+    
+        width: 100vw;
+    }
+    .Notes-display-main {
+    width: 100vw;
+    }
+    .Notes-display {
+    width: 90vw;
+    }
+    .input-box {
+    width: 100vw;
+    }
+    .input-box textarea {
+        width: 85vw;
+    }
+    /* Notebox end */
+
+}
+
+@media (max-width:476px) {
+
+    .group-name input {
+        font-size: 17px;
+        line-height: 23px;
+    }
+    .group-name, .color-choose {
+        
+        gap: 10px;
+    }
+    .popup-group {
+        padding: 10px;
+       
+    }
+
+    .color-choose div {
+        width: 40vw;
+        height: 3vh;
+        gap: 7px;
+    }
+
+    .color-choose div span {
+        width: 20px;
+        height: 20px;
+    }
+
+    .group-name label {
+        width: 29vw;
+    }
+
+    .color-choose h3 {
+        width: 33vw;
+    }
+
+    .group-name label,
+    .color-choose h3 {
+        font-size: 19px;
+        line-height: 26px;
+
+    }
+    .input-box textarea {
+        font-size: 25px;
+    }
+
+}
+@media (max-width:360px) {
+
+    .group-name label {
+        width: 30vw;
+    }
+
+    .color-choose h3 {
+        width: 35vw;
+    }
+    .input-box textarea {
+        font-size: 25px;
+    }
+
+
+}
+@media (max-width:280px) {
+    .color-choose div {
+        width: 45vw;
+        height: 4vh;
+        gap: 4px;
+    }
+    .color-choose div span {
+        width: 19px;
+        height: 18px;
+    }
+
+    .group-name input {
+        font-size: 14px;
+        line-height: 23px;
+    }
+    .group-name input {
+        width: 49vw;
+    }
+    .group-name label,
+    .color-choose h3 {
+        font-size: 15px;
+        line-height: 26px;
+
+    }
+    .group h2 {
+        font-size: 20px;
+    }
+
+    .group-name label {
+        width: 31vw;
+    }
+
+    .color-choose h3 {
+        width: 35vw;
+    }
+    .input-box textarea {
+        font-size: 20px;
+    }
+
 }
