@@ -1,23 +1,24 @@
-
-
 /* NotesGrpList start */
-.notesgrp{
+.notesgrp {
     width: 29vw;
     height: 100vh;
     background-color: #fff;
 }
-.notetitle{
+
+.notetitle {
     width: 28vw;
     margin: 0 auto;
     padding-top: 30px;
     text-align: center;
 }
-.notetitle h1{
+
+.notetitle h1 {
     font-size: 35px;
     font-weight: 500;
     line-height: 41px;
 }
-.open-popup{
+
+.open-popup {
     width: 75px;
     height: 75px;
     background-color: #16008B;
@@ -30,19 +31,29 @@
     cursor: pointer;
 }
 
-.addgrpbtn{
-    
+.addgrpbtn {
+
     all: unset;
     font-size: 62px;
     font-weight: 500;
     color: #FFF;
-    
+
 
 }
+
 /* NotesGrpList end */
 /* PopUpGroup start */
+.popup-bg-blur {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    Top: 50%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-.popup-group{
+.popup-group {
     padding: 30px;
     background-color: #fff;
     position: absolute;
@@ -52,29 +63,33 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: translate(-50%, -50%);
 }
-   
 
-.group{
-    
+
+.group {
+
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.group section{
+
+.group section {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.group h2{
+
+.group h2 {
     font-size: 29px;
     font-weight: 500;
     line-height: 46px;
 }
-.popupgrp-btn{
+
+.popupgrp-btn {
     display: flex;
     justify-content: end;
 }
-.group button{
+
+.group button {
     all: unset;
     background-color: #001F8B;
     border-radius: 11px;
@@ -82,23 +97,28 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
-    max-width:12vw;
+    max-width: 12vw;
     padding: 2px 40px;
     text-align: center;
     cursor: pointer;
 
 }
-.group-name,.color-choose{
-   
+
+.group-name,
+.color-choose {
+
     display: flex;
     gap: 20px;
 }
-.group-name label, .color-choose h3{
+
+.group-name label,
+.color-choose h3 {
     font-size: 27px;
     font-weight: 500;
     line-height: 43px;
 }
-.group-name input{
+
+.group-name input {
     width: 27vw;
     padding: 0px 0 0 31px;
     color: #CCCCCC;
@@ -106,74 +126,82 @@
     border: 2px solid #CCCCCC;
     border-radius: 22px;
     font-size: 23px;
-     font-weight: 400;
-     line-height: 36px;
+    font-weight: 400;
+    line-height: 36px;
 }
 
-.color-choose div{
+.color-choose div {
     width: 25vw;
     height: 6vh;
     display: flex;
     gap: 12px;
     align-items: center;
 }
-.color-choose div span{
+
+.color-choose div span {
     width: 41px;
     height: 41px;
     border-radius: 50px;
     cursor: pointer;
 
 }
+
 /* PopUpGroup end   */
 /* NewNotesgrpgrp start   */
-    .new-notegrp{
-        overflow-y: scroll;
-         height:80vh;
-         margin-top: 40px;
-                  
-    }
-   
+.new-notegrp {
+    overflow-y: scroll;
+    height: 80vh;
+    margin-top: 40px;
 
-    .newnotegrp-container{
-        width: 27vw;
-        cursor: pointer;
-    }
-    .newnotegrp-container:hover {
-        background:  #1212122b;
-        border-radius: 16px;
-       
-    }
-    .note-circle{
-        width: 76px;
-        height: 66px;
-        border-radius:50px;
-        font-size:24px;
-        font-weight:500;
-        color:#FFF;
-        position: relative;
-    }
-    .note-circle span{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .note-name{
+}
 
-        width: 22vw;     
-    }
-    .note-name p {
-       
-        height: 66px;
-        font-size:24px;
-        font-weight:500;
-        color:#000;
-        display: flex;
-        align-items: center;
-    }
+
+.newnotegrp-container {
+    width: 27vw;
+    cursor: pointer;
+}
+
+.newnotegrp-container:hover {
+    background: #1212122b;
+    border-radius: 16px;
+
+}
+
+.note-circle {
+    width: 76px;
+    height: 66px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFF;
+    position: relative;
+}
+
+.note-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.note-name {
+
+    width: 22vw;
+}
+
+.note-name p {
+
+    height: 66px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
 /* NewNotesgrp end   */
 /* NotesBox Start   */
-.noteBox-main{
+.noteBox-main {
     background-color: #DAE5F5;
     width: 71vw;
     height: 100vh;
@@ -182,16 +210,19 @@
     justify-content: space-between;
 
 }
-.backbtn{
+
+.backbtn {
     display: none;
     place-items: center;
     cursor: pointer;
 }
-.input-box{
+
+.input-box {
     width: 71vw;
     background: #001F8B;
 }
-.input-box textarea{
+
+.input-box textarea {
     resize: none;
     padding: 20px 0 0 20px;
     width: 63vw;
@@ -204,49 +235,55 @@
     border-radius: 9px;
 
 }
+
 /* NotedBox end   */
 /* DefaultBox end   */
-    .default-main{
-        background-color: #DAE5F5;
-         width: 71vw;
-        height: 100vh; 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
+.default-main {
+    background-color: #DAE5F5;
+    width: 71vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 /* DeFaultBox end   */
 /* Notes-display start   */
-.Notes-display-main{
+.Notes-display-main {
     width: 71vw;
     height: 52vh;
     overflow-y: scroll;
-    
+
 }
-.Notes-display{
+
+.Notes-display {
     width: 67vw;
-     margin: 20px auto;
-     padding: 20px;
+    margin: 20px auto;
+    padding: 20px;
     margin-top: 20px;
     background-color: #FFF;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .note-para p {
     font-size: 18px;
     line-height: 28px;
     text-align: left;
     font-weight: 400;
 }
-.note-time p{
+
+.note-time p {
     font-size: 18px;
     line-height: 28px;
     text-align: end;
     font-weight: 500;
     color: #353535;
-    
+
 
 }
-.note-time p span{
+
+.note-time p span {
     display: inline-grid;
     width: 8px;
     height: 8px;
@@ -254,102 +291,124 @@
     background-color: #353535;
     margin: 2px 15px;
 }
+
 /* Notes-display end   */
 
 /* media 1024px start   */
-@media (max-width:1024px){
+@media (max-width:1024px) {
     .Notes-display-main {
-         height: 78vh;       
+        height: 78vh;
     }
+
     .note-circle {
         width: 71px;
         height: 59px;
     }
+
     /* Popupgroup start */
 
     .color-choose div {
         width: 28vw;
         height: 7vh;
-        
+
     }
+
     .color-choose div span {
         width: 35px;
         height: 35px;
     }
-    .group-name label{
+
+    .group-name label {
         width: 18vw;
     }
+
     .color-choose h3 {
         width: 18vw;
     }
+
     /* Popupgroup ned */
     .Notes-display {
         width: 66vw;
     }
 
 }
-@media (max-width:912px){
+
+@media (max-width:912px) {
     .group-name input {
         width: 31vw;
     }
-    .group-name label{
+
+    .group-name label {
         width: 18vw;
     }
+
     .color-choose h3 {
         width: 20vw;
     }
-    .group-name label, .color-choose h3 {
+
+    .group-name label,
+    .color-choose h3 {
         font-size: 28px;
         line-height: 32px;
     }
 }
-@media (max-width: 768px){
 
-.group-name input {
-    width: 35vw;
-}
-/* Popupgroup start */
+@media (max-width: 768px) {
 
-.color-choose div {
-    width: 28vw;
-    height: 4vh;
-    
-}
-.color-choose div span {
-    width: 5vw;
-    height: 2.5vh;
-}
+    .group-name input {
+        width: 35vw;
+    }
+
+    /* Popupgroup start */
+
+    .color-choose div {
+        width: 28vw;
+        height: 4vh;
+
+    }
+
+    .color-choose div span {
+        width: 5vw;
+        height: 2.5vh;
+    }
 
     /* Popupgroup ned */
     .Notes-display {
         width: 65vw;
     }
 }
-@media (max-width: 820px){
+
+@media (max-width: 820px) {
 
     .group-name input {
         width: 33vw;
     }
+
     /* Popupgroup start */
 
-  
+
     .color-choose div {
         width: 28vw;
         height: 3vh;
     }
+
     .color-choose div span {
         width: 5vw;
         height: 2.5vh;
     }
-    .group-name label{
+
+    .group-name label {
         width: 21vw;
     }
+
     .color-choose h3 {
         width: 24vw;
     }
+
     /* Popupgroup ned */
     .Notes-display {
         width: 62vw;
     }
-    }
+}
+
 /* media 1024px end */

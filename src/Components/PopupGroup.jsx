@@ -101,7 +101,8 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
   };
 
   return (
-    <main className="popup-group">
+    <main  className="popup-bg-blur" >
+    <section className="popup-group">
       <div className="group">
         <h2>Create New group</h2>
         <section>
@@ -149,6 +150,7 @@ const PopupGroup = ({ open, close, Setisnoteadd }) => {
         <button onClick={HandleCreateGroup}>create</button>
         </div>
       </div>
+    </section>
     </main>
   );
 };
