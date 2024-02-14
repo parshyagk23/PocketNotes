@@ -221,6 +221,9 @@ body {
     .input-box textarea {
         font-size: 25px;
     }
+    .new-notegrp {
+        height: 65vh;
+    }
 
 
 }
