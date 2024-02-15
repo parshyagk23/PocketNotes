@@ -52,7 +52,9 @@ body {
     /*  Notegrp start */
     .notesgrp {
         width: 100vw;
+      
     }
+   
 
     /*  Notegrp end */
     .notetitle {
@@ -63,7 +65,7 @@ body {
     .new-notegrp {
         width: 80vw;
         margin: 20px 0 0 44px;
-        height: 67vh;
+        /* height: 67vh; */
     }
 
 
@@ -149,7 +151,9 @@ body {
         width: 100vw;
     }
     .Notes-display-main {
-    width: 100vw;
+        width: 100vw;
+      
+    
     }
     .Notes-display {
     width: 90vw;
@@ -207,6 +211,7 @@ body {
     .input-box textarea {
         font-size: 25px;
     }
+    
 
 }
 @media (max-width:360px) {
@@ -221,9 +226,7 @@ body {
     .input-box textarea {
         font-size: 25px;
     }
-    .new-notegrp {
-        height: 65vh;
-    }
+    
 
 
 }
@@ -265,8 +268,10 @@ body {
     .input-box textarea {
         font-size: 20px;
     }
-    .new-notegrp {
+    /* .new-notegrp {
         height: 57vh;
-    }
+    } */
+    
+
 
 }

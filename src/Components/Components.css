@@ -3,6 +3,7 @@
     width: 29vw;
     height: 100vh;
     background-color: #fff;
+    
 }
 
 .notetitle {
@@ -150,11 +151,10 @@
 /* NewNotesgrpgrp start   */
 .new-notegrp {
     overflow-y: scroll;
-    height: 80vh;
+    height: calc(80vh - 71px);
     margin-top: 40px;
 
 }
-
 
 .newnotegrp-container {
     width: 27vw;
@@ -215,7 +215,9 @@
     display: none;
     place-items: center;
     cursor: pointer;
+    
 }
+
 
 .input-box {
     width: 71vw;
@@ -251,7 +253,7 @@
 /* Notes-display start   */
 .Notes-display-main {
     width: 71vw;
-    height: 52vh;
+    height: calc(100vh - 85px - 216px);
     overflow-y: scroll;
 
 }
@@ -296,9 +298,7 @@
 
 /* media 1024px start   */
 @media (max-width:1024px) {
-    .Notes-display-main {
-        height: 78vh;
-    }
+   
 
     .note-circle {
         width: 71px;
@@ -334,6 +334,7 @@
 }
 
 @media (max-width:912px) {
+    
     .group-name input {
         width: 31vw;
     }
@@ -354,6 +355,7 @@
 }
 
 @media (max-width: 768px) {
+    
 
     .group-name input {
         width: 35vw;
