@@ -14,7 +14,6 @@ function App() {
       <main >
         <div className="mobile-note" >
          {OpenNoteBox?( OpenNoteBox?(<NotesBox NoteName={NoteName} SetOpenNoteBox={SetOpenNoteBox} />):(<DefaultNoteBox/>)):(  <NotesGrpList SetOpenNoteBox={SetOpenNoteBox} setNoteName={setNoteName} />)}
-
         </div>
       
       <div className="desktop-note"  >
