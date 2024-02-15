@@ -65,7 +65,7 @@ body {
     .new-notegrp {
         width: 80vw;
         margin: 20px 0 0 44px;
-        /* height: 67vh; */
+       
     }
 
 
@@ -268,9 +268,7 @@ body {
     .input-box textarea {
         font-size: 20px;
     }
-    /* .new-notegrp {
-        height: 57vh;
-    } */
+    
     
 
 
