@@ -227,7 +227,7 @@
     background: #001F8B;
 }
 
-.input-box input {
+.input-box textarea {
     resize: none;
     padding: 20px 0 0 20px;
     width: 78vw;

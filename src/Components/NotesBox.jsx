@@ -84,12 +84,13 @@ const NotesBox = ({ NoteName,SetOpenNoteBox }) => {
             alignItems: "end",
           }}
         >
-          <input
+          <textarea
+          rows="4"
             type="text"
             value={saveInputText}
             placeholder="Enter your text here..........."
             onChange={(e) => setsaveInputText(e.target.value)}
-          ></input>
+          ></textarea>
           <button
             style={{ all: "unset", cursor: "pointer" }}
             onClick={() => HandleSaveNotes()}
